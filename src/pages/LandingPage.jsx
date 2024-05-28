@@ -1,14 +1,20 @@
 import { Jumbotron } from "../components/jumbotron";
 import { Navbar } from "../components/navigation";
-import { About } from "../components/sections";
-import { Footer } from "./../components/sections";
+import {
+  About,
+  Portofolio,
+  Certification,
+  Footer,
+} from "../components/sections";
 function LandingPage() {
   return (
     <>
-      <div className="bg-primary">
+      <div className="bg-primary bg-repeat bg-contain">
         <Navbar />
         <Jumbotron />
         <About />
+        <Portofolio />
+        <Certification />
         <Footer />
       </div>
     </>

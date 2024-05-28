@@ -1,49 +1,80 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { useInView } from "framer-motion";
 
 export const Navbar = () => {
+  const [color, setColor] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  // Fungsi untuk mengubah warna navbar saat scroll
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeColor);
+
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, []);
+
   return (
     <>
-      <div className="flex justify-center">
-        <nav className="bg-[#16202de6] p-5 text-white w-full absolute z-50 border border-[#2e3c51]">
-          <div className="flex justify-around items-center">
-            {/* Logo */}
-            <div className="nav-brand">
-              <a href="#" className="text-2xl tracking-wider font-bold">
-                dybim__
-              </a>
-            </div>
-
-            {/* Navigation */}
-            <ul className="w-2/6 flex justify-around items-center">
-              <li className="nav-item">
-                <a href="#" className="nav-links">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-links">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-links">
-                  Skills
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-links">
-                  Portofolio
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-links">
-                  Certifications
-                </a>
-              </li>
-            </ul>
+      <nav
+        className={
+          "p-5 text-white w-full fixed transition-all duration-500 ease-in-out z-50 border border-[#2e3c51] " +
+          (color ? "bg-white shadow text-black" : "bg-[#16202de6]  border-none")
+        }
+        ref={ref}
+        style={{
+          transform: isInView ? "none" : "translateY(-50px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1)",
+        }}
+      >
+        <div className="flex justify-around items-center">
+          {/* Logo */}
+          <div className="nav-brand">
+            <a href="#" className="text-2xl tracking-wider font-bold ">
+              dybim__
+            </a>
           </div>
-        </nav>
-      </div>
+
+          {/* Navigation */}
+          <ul className="w-2/6 flex justify-around items-center">
+            <li className="nav-item">
+              <a href="#" className="nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg">
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="#" className="nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg">
+                About
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="#" className="nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg">
+                Skills
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="#" className="nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg">
+                Portofolio
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="#" className="nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg">
+                Certifications
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </>
   );
 };
