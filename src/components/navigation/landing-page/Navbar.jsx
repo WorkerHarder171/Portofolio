@@ -27,8 +27,8 @@ export const Navbar = () => {
     <>
       <nav
         className={
-          "p-5 text-white w-full fixed transition-all duration-500 ease-in-out z-50 border border-[#2e3c51] " +
-          (color ? "bg-white shadow text-black" : "bg-[#16202de6]  border-none")
+          "p-5 w-full fixed transition-all duration-500 ease-in-out z-50 border border-[#2e3c51] " +
+          (color ? "bg-white shadow text-black" : "bg-[#16202de6]  border-none text-white")
         }
         ref={ref}
         style={{
