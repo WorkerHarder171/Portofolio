@@ -37,10 +37,10 @@ export const Navbar = () => {
           transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1)",
         }}
       >
-        <div className="flex justify-around items-center">
+        <div className="flex justify-around items-center ">
           {/* Logo */}
           <div className="nav-brand">
-            <a href="#" className="text-2xl tracking-wider font-bold ">
+            <a href="#" className={"text-2xl tracking-wider font-bold"}>
               dybim__
             </a>
           </div>
@@ -48,27 +48,22 @@ export const Navbar = () => {
           {/* Navigation */}
           <ul className="w-2/6 flex justify-around items-center">
             <li className="nav-item">
-              <a href="#" className="nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg">
+              <a href="#" className={"nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg " + (color ? "hover:font-bold" : "hover:text-[#B895FD]")}>
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg">
+              <a href="#" className={"nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg " + (color ? "hover:font-bold" : "hover:text-[#B895FD]")}>
                 About
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg">
-                Skills
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg">
+              <a href="#" className={"nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg " + (color ? "hover:font-bold" : "hover:text-[#B895FD]")}>
                 Portofolio
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg">
+              <a href="#" className={"nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg " + (color ? "hover:font-bold" : "hover:text-[#B895FD]")}>
                 Certifications
               </a>
             </li>

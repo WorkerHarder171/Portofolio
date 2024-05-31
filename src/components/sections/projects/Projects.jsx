@@ -2,20 +2,21 @@ import React from "react";
 import { data } from "./ListProjects"; // Pastikan ListProjects.js menyediakan data yang benar
 
 export const Portofolio = () => {
-  const imageHeight = "200px"; // Ubah tinggi sesuai kebutuhan
+  // const imageHeight = "200px"; // Ubah tinggi sesuai kebutuhan
 
   return (
     <div className="container p-24 text-white mx-auto">
       <p className="text-3xl font-bold uppercase py-10">Projects</p>
       <div className="grid grid-cols-2 gap-20 justify-center items-center">
         {data.map((data, i) => (
-          <div key={i} className="cards border rounded-md border-[#2e3c51] bg-[#10151D] transform transition-transform duration-500 ease-out hover:scale-110">
+          <div key={i} className="cards border rounded-md border-[#2e3c51] bg-[#10151D] transform transition-transform duration-500 ease-out hover:scale-110"
+            style={{ boxShadow: "0px 0px 100px 25px rgba(127, 17, 224, 0.1)" }}
+          >
             <div className="card-head">
               <img
-                className="border w-full"
-                src={data.img}
+                className="border"
+                src={data.image}
                 alt={data.title}
-                style={{ height: imageHeight, objectFit: "cover" }}
               />
             </div>
             <div className="card-body p-5 relative">
