@@ -20,7 +20,7 @@ export const Certification = () => {
           Certification
         </p>
         {data.slice(0, visibleItems).map((item, i) => (
-          <div className="wrapper lg:flex sm:flex-col justify-center  gap-14 my-14" key={i}>
+          <div className="wrapper flex lg:flex-row sm:flex-col justify-center  gap-14 my-14" key={i}>
             <img
               className="h-[200px] border"
               src={item.image}
