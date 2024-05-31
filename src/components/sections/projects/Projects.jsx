@@ -6,8 +6,8 @@ export const Portofolio = () => {
 
   return (
     <div className="container p-24 text-white mx-auto">
-      <p className="text-4xl font-bold uppercase text-center py-10">Projects</p>
-      <div className="grid grid-cols-3 gap-20 justify-center items-center">
+      <p className="text-3xl font-bold uppercase py-10">Projects</p>
+      <div className="grid grid-cols-2 gap-20 justify-center items-center">
         {data.map((data, i) => (
           <div key={i} className="cards border rounded-md border-[#2e3c51] bg-[#10151D] transform transition-transform duration-500 ease-out hover:scale-110">
             <div className="card-head">

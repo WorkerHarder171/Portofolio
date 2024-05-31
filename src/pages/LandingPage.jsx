@@ -9,7 +9,7 @@ import {
 function LandingPage() {
   return (
     <>
-      <div className="bg-primary bg-repeat bg-contain">
+      <div className="bg-primary bg-contain bg-auto">
         <Navbar />
         <Jumbotron />
         <About />

@@ -20,4 +20,11 @@ export const data = [
     image: "null",
     link: "-",
   },
+  {
+    id: "4",
+    title: "Bankir",
+    desc: "Ini merupakan web bank",
+    image: "null",
+    link: "-",
+  },
 ];

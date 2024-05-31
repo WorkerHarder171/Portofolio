@@ -1,33 +1,54 @@
-import React from "react";
-  import { data } from "./ListCertificate";
+import React, { useState } from "react";
+import { data } from "./ListCertificate";
 
 export const Certification = () => {
+  // State untuk melacak jumlah elemen yang ditampilkan
+  const [visibleItems, setVisibleItems] = useState(3);
+
+  // Fungsi untuk menangani klik tombol "See More"
+  const handleSeeMore = () => {
+    setVisibleItems((prevVisibleItems) => prevVisibleItems + 5);
+  };
+
   return (
-    <div className="container p-24 mx-auto text-white ">
-      <p className="text-4xl font-bold uppercase text-center py-10">
-        Certification
-      </p>
-      <div className="p-5 border border-[#2e3c51] bg-[#10151d] rounded-md flex flex-col gap-5 overflow-auto h-[400px]">
-        {data.map((data, i) => (
-          <div className="cards border border-[#2e3c51] flex justify-between gap-5 items-center" key={i}>
-            <div className="wrapper flex justify-start items-center">
-              <div className="card-header">
-                <img
-                  className="min-w-[150px] max-w-[200px] h-[100px] border"
-                  src={data.img}
-                  alt={data.title}
-                />
+    <div className="p-24 text-white ">
+      <div className="container mx-auto w-10/12 bg-[#10151D] border border-[#2e3c51] p-10 text-white"
+        style={{ boxShadow: "0px 0px 250px 1px rgba(127, 17, 224, 0.1)" }}
+      >
+      <p className="text-3xl my-3 uppercase font-bold tracking-wide">Certification</p>
+        {data.slice(0, visibleItems).map((item, i) => (
+          <div
+            className="wrapper flex justify-center  gap-14 my-14"
+            key={i}
+          >
+            <img
+              className="h-[200px] border"
+              src={item.img}
+              alt={item.title}
+              width={600}
+            />
+            <div className="wrapper-text">
+              <div className="text-2xl font-bold capitalize my-3 text-justify">
+                {item.title}
               </div>
-              <div className="card-body p-5">
-                <p className="text-2xl italic">{data.title}</p>
-                <p className="text-lg font-thin">{data.desc}</p>
-              </div>
+              <div className="text-lg font-thin ">{item.desc}</div>
+              <button className="btn border py-3 px-5 rounded my-5">
+                View
+              </button>
             </div>
-            <button className="p-2 bg-[#a87ffb] hover:bg-[#B895FD] rounded-md mr-10">
-              View Certificate
-            </button>
           </div>
         ))}
+
+        {visibleItems < data.length && (
+          <div className="flex justify-center">
+            <button
+              className="btn border py-3 px-5 rounded my-5"
+              onClick={handleSeeMore}
+            >
+              See More
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

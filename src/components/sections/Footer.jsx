@@ -1,41 +1,42 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSquareFacebook,
+  faSquareInstagram,
+  faLinkedin,
+  faSquareWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 
 export const Footer = () => {
   return (
     <>
-      <footer className="border-t border-[#2e3c51] bg-[#16202de6] shadow">
-        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-          <div className="sm:flex sm:items-center sm:justify-between">
-            <a className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                dybim__
-              </span>
+      <footer className="p-10 bg-[#10151D] border-[#2e3c51] border">
+        <div className="wrapper-text text-white text-center">
+          <p className="text-center text-4xl my-3">Get in touch</p>
+          <p className="font-thin text-xl text-center">
+            For business inquiry please send email to <span> </span>
+            <a
+              href="mailto:dadybima171@gmail.com"
+              className="text-[#92A9FF] hover:text-[#B895FD]"
+            >
+              dadybima171@gmail.com
             </a>
-            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          </p>
+          <div className="wrapper flex gap-5 justify-center items-center text-4xl my-5">
+            <a href="https://www.facebook.com/dady.bima.5">
+              <FontAwesomeIcon icon={faSquareFacebook} />
+            </a>
+            <a href="https://instagram.com/dybim__">
+              <FontAwesomeIcon icon={faSquareInstagram} />
+            </a>
+            <a href="https://www.linkedin.com/in/dady-bima/">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
 
-              <li>
-                <a href="#" className="hover:underline me-4 md:me-6">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline me-4 md:me-6">
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline me-4 md:me-6">
-                  Portofolio
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline me-4 md:me-6">
-                  Certification
-                </a>
-              </li>
-            </ul>
+            <a href="https://wa.me/087812566311">
+              <FontAwesomeIcon icon={faSquareWhatsapp} />
+            </a>
           </div>
-          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2024{" "}
             <a href="https://flowbite.com/" className="hover:underline">
@@ -45,6 +46,7 @@ export const Footer = () => {
           </span>
         </div>
       </footer>
+
     </>
   );
 };
