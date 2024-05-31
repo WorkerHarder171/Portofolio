@@ -48,7 +48,7 @@ export const Jumbotron = () => {
         <div className="wrapper flex items-center ">
           <img
             className="mx-auto rounded-full border border-[#2e3c51] shadow shadow-[#2e3c51]"
-            src={pp}
+            src={pp} // Use the imported image here
             style={{ boxShadow: "0px 0px 100px 25px rgba(127, 17, 224, 0.1)" }}
             alt="my-photo"
             width={400}
