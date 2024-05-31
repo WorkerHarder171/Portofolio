@@ -46,7 +46,7 @@ export const Navbar = () => {
           </div>
 
           {/* Navigation */}
-          <ul className="w-2/6 flex justify-around items-center">
+          <ul className="w-2/6 flex justify-around items-center text-lg">
             <li className="nav-item">
               <a href="#" className={"nav-links duration-500 ease-in-out hover:font-semibold hover:mx-5 hover:text-lg " + (color ? "hover:font-bold" : "hover:text-[#B895FD]")}>
                 Home

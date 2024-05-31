@@ -1,5 +1,5 @@
 import React from "react";
-import pp from "../../assets/pp.jpg";
+import pp from ".git /../../assets/pp.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSquareFacebook,
