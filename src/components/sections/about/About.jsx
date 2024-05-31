@@ -4,7 +4,7 @@ import { data, education } from "./ListAbout";
 
 export const About = () => {
   return (
-    <div className="p-24 text-white ">
+    <div className="p-24 text-white relative z-0 ">
       <div
         className="container mx-auto w-10/12 bg-[#10151D] border border-[#2e3c51] p-10"
         style={{ boxShadow: "0px 0px 250px 25px rgba(127, 17, 224, 0.1)" }}
@@ -27,9 +27,9 @@ export const About = () => {
           <p className="text-xl my-3 uppercase font-bold tracking-wide">
             Experience
           </p>
-          <div className="grid grid-cols-2 justify-center gap-10">
+          <div className="grid lg:grid-cols-2 sm:grid-cols-1 justify-center gap-10">
             {data.map((item, i) => (
-              <div className="text-content flex gap-5 w-full" key={i}>
+              <div className="text-content lg:flex sm:flex-col gap-5 w-full" key={i}>
                 <div className="left-content w-7/12">
                   <p className="date text-xl tracking-wider font-bold text-[#B895FD]">
                     {item.date}
@@ -53,9 +53,9 @@ export const About = () => {
           <p className="text-xl my-3 uppercase font-bold tracking-wide">
             Education
           </p>
-          <div className="grid grid-cols-2 justify-center gap-10">
+          <div className="grid lg:grid-cols-2 sm:grid-cols-1 justify-center gap-10">
             {education.map((item, i) => (
-              <div className="text-content flex gap-5 w-full" key={i}>
+              <div className="text-content lg:flex sm:flex-col gap-5 w-full" key={i}>
                 <div className="left-content w-7/12">
                   <p className="date text-xl tracking-wider font-bold text-[#B895FD]">
                     {item.date}

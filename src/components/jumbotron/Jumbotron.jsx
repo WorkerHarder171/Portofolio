@@ -10,13 +10,13 @@ import {
 
 export const Jumbotron = () => {
   return (
-    <div className="relative h-screen Z-0">
+    <div className="relative lg:h-screen sm:h-auto z-0">
       <div
         className="absolute top-[-1px] left-1/2 transform -translate-x-1/2 bg-white w-[400px] h-[1px] rounded-b-full z-15"
         style={{ boxShadow: "0px 0px 250px 25px #93bdf481" }}
       ></div>
 
-      <div className="relative p-24 lg:grid lg:grid-cols-2 sm:grid-cols-1 justify-center items-center  h-screen z-0 container mx-auto">
+      <div className="relative p-24 lg:grid lg:grid-cols-2 sm:grid-cols-1 sm:h-auto justify-center items-center  lg:h-screen z-0 container mx-auto">
         <div className="text-group my-5 text-[#D9DFE7]">
           <p className="text-5xl italic font-semibold mb-3">
             Welcome to My Page
