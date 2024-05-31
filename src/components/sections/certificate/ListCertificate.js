@@ -1,8 +1,8 @@
-import alterra from "../../../assets/Altera.jpg";
-import web from "../../../assets/Dicoding Dasar Web.jpg";
-import cloud from "../../../assets/AWS Cloud.jpg";
-import nvidia from "../../../assets/NVIDIA.jpg";
-import toufl from "../../../assets/TOUFL.jpg";
+import alterra from "@/assets/Altera.jpg";
+import web from "@/assets/Dicoding Dasar Web.jpg";
+import cloud from "@/assets/AWS Cloud.jpg";
+import nvidia from "@/assets/NVIDIA.jpg";
+import toufl from "@/assets/TOUFL.jpg";
 
 export const data = [
   {

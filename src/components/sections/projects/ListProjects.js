@@ -1,5 +1,5 @@
-import recything from "../../../assets/recything.jpg"
-import ERD from "../../../assets/E-RD.jpg"
+import recything from "@/assets/recything.jpg"
+import ERD from "@/assets/E-RD.jpg"
 
 export const data = [
   {
