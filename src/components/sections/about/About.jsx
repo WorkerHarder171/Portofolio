@@ -29,7 +29,7 @@ export const About = () => {
           </p>
           <div className="grid lg:grid-cols-2 sm:grid-cols-1 justify-center gap-10">
             {data.map((item, i) => (
-              <div className="text-content lg:flex sm:flex-col gap-5 w-full" key={i}>
+              <div className="text-content flex lg:flex-row sm:flex-col gap-5 w-full" key={i}>
                 <div className="left-content w-7/12">
                   <p className="date text-xl tracking-wider font-bold text-[#B895FD]">
                     {item.date}
@@ -55,7 +55,7 @@ export const About = () => {
           </p>
           <div className="grid lg:grid-cols-2 sm:grid-cols-1 justify-center gap-10">
             {education.map((item, i) => (
-              <div className="text-content lg:flex sm:flex-col gap-5 w-full" key={i}>
+              <div className="text-content flex lg:flex-row sm:flex-col gap-5 w-full" key={i}>
                 <div className="left-content w-7/12">
                   <p className="date text-xl tracking-wider font-bold text-[#B895FD]">
                     {item.date}
