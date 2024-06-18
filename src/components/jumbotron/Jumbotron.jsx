@@ -16,7 +16,7 @@ export const Jumbotron = () => {
         style={{ boxShadow: "0px 0px 250px 25px #93bdf481" }}
       ></div>
 
-      <div className="relative p-24 lg:grid lg:grid-cols-2 sm:grid-cols-1 sm:h-auto justify-center items-center  lg:h-screen z-0 container mx-auto">
+      <div className="relative md:p-24 sm:p-20 lg:grid lg:grid-cols-2 sm:grid-cols-1 sm:h-auto justify-center items-center  lg:h-screen z-0 container mx-auto">
         <div className="text-group my-5 text-[#D9DFE7]">
           <p className="text-5xl italic font-semibold mb-3">
             Welcome to My Page
@@ -54,7 +54,7 @@ export const Jumbotron = () => {
             width={400}
             height={400}
           />
-          <div className="flex flex-col text-white text-2xl gap-5">
+          <div className="lg:flex flex-col text-white text-2xl gap-5 md:hidden sm:hidden">
             <a
               href="https://www.facebook.com/dady.bima.5"
               className="duration-300 ease-in-out hover:text-[#B895FD] hover:my-3"
